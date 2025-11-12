@@ -1,7 +1,6 @@
 ﻿
 
 using Catalog.API.Models;
-using FluentValidation;
 
 namespace Catalog.API.Products.DeleteProduct
 {
@@ -17,7 +16,7 @@ namespace Catalog.API.Products.DeleteProduct
         }
     }
 
-    internal class DeleteProductCommandHandler(IDocumentSession session, ILogger<DeleteProductCommandHandler> logger)
+    internal class DeleteProductCommandHandler(IDocumentSession session)
         : ICommandHandler<DeleteProductCommand, DeleteProductResult>
     {
         public async Task<DeleteProductResult> Handle(DeleteProductCommand request, CancellationToken cancellationToken)

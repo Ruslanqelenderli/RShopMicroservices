@@ -1,6 +1,4 @@
 ﻿using Catalog.API.Models;
-using FluentValidation;
-using Marten;
 
 namespace Catalog.API.Products.CreateProduct
 {
