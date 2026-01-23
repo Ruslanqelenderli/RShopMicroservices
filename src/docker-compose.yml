@@ -8,6 +8,8 @@ services:
     image: redis
   orderDb:
     image: mcr.microsoft.com/mssql/server
+  messagebroker:
+    image: rabbitmq:management
 
 
   catalog.api:

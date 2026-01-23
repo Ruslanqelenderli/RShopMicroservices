@@ -13,6 +13,7 @@ namespace Ordering.API.Endpoints
         {
             app.MapDelete("/orders/{id}", async (Guid Id, ISender sender) =>
             {
+                
                 var result = await sender.Send(new DeleteOrderCommand(Id));
 
                 var response = result.Adapt<DeleteOrderResponse>();
